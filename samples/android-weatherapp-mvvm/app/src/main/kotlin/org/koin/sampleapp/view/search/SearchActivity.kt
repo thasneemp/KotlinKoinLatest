@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
-import org.koin.android.architecture.ext.viewModel
+import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.sampleapp.R
 import org.koin.sampleapp.view.Arguments.ARG_ADDRESS
 import org.koin.sampleapp.view.Arguments.ARG_WEATHER_DATE
@@ -21,9 +21,10 @@ class SearchActivity : AppCompatActivity() {
 
     val myModel: SearchViewModel by viewModel()
 
-    val s : String by lazy {
+    val s: String by lazy {
         println()
-        "pouet" }
+        "pouet"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
